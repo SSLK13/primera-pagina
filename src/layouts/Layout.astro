@@ -1,6 +1,7 @@
 ---
 // Codigo JS TS
 import '../styles/global.css'
+import Navbar from '../components/Navbar.astro'
 ---
 
 <!doctype html>
@@ -15,21 +16,7 @@ import '../styles/global.css'
 	</head>
 
 	<body>
-		<header>
-			<nav>
-				<div>
-					Logo
-				</div>
-				
-				<ul>
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/prov">Provisional</a></li>
-					<li><a href="/about-us">Sobre Nosotros</a></li>
-				</ul>
-
-			</nav>
-	
-		</header>
+		<Navbar />
 
 		<slot />
 		
