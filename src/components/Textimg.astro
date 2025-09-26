@@ -1,4 +1,15 @@
+---
+interface Props {
+    title: string
+    img: string
+
+}
+
+const title = Astro.props.title
+const image = Astro.props.img
+---
+
 <div>
-    <img src="" alt="">
-    <p></p>
+    <img src={image} alt="">
+    <p>{title}</p>
 </div>
