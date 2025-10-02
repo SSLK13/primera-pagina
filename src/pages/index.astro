@@ -3,17 +3,17 @@ import Textimg from "../components/Textimg.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
-    <div>
-        <img src="" alt="">
+    <div class="Container">
+        <img src="Eguitarbg.jpg" alt="" class="Background">
         <h1>Convierte el silencio en sonido</h1>
     </div>
 
     <div>
         <h2>Instrumentos de Calidad para Cada Músico</h2>
-        <div>
-            <Textimg title="Texto random 1" img="Free-Bird-mobile-hd-wallpaper.jpg" />
-            <Textimg title="Texto random 2" img="Free-Bird-mobile-hd-wallpaper.jpg" />
-            <Textimg title="Texto random 3" img="Free-Bird-mobile-hd-wallpaper.jpg" />
+        <div class="Image_container">
+            <Textimg title="Texto random 1" img="Keyboard.jpg" />
+            <Textimg title="Texto random 2" img="Drums.jpg" />
+            <Textimg title="Texto random 3" img="Eguitar.avif" />
         </div>
     </div>
 
@@ -42,4 +42,16 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
 </Layout>
-Vista index
+
+<style>
+    .Image_container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10%;
+    }
+
+    .Background {
+        width: 100% ;;
+    }
+
+</style>
