@@ -14,8 +14,10 @@ const price = Astro.props.price
 ---
 
 <div class="Main">
-    <img src={image} alt="">
-    <p class="Title">{title}</p>
+    <div class="Container">
+        <img src={image} alt="">
+        <p class="Title">{title}</p>
+    </div>
     <div class="Texts">
         <p>${price}</p>
         <p>{items}</p>
@@ -41,9 +43,14 @@ const price = Astro.props.price
     }
 
     img {
-        height: 300px;
+        width: 100%;
+        
         background-color: white;
         object-fit: cover;
+        padding: auto;
+    }
+
+    .Container {
     }
 
 </style>

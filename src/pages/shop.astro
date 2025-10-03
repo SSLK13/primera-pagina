@@ -10,10 +10,10 @@ import Shopitem from "../components/Shopitem.astro"
     <div class="Nav">
         <h1>Aqui va una barra de busqueda</h1>
         <h2>Aqui va un filtro</h2>
-        <div>
+        <div class="Cart-container">
             <p>Ir al carro</p>
             <button>
-                <Icon name="cart" />
+                <Icon name="cart" size={"22px"}/>
             </button>
         </div>
     </div>
@@ -22,7 +22,7 @@ import Shopitem from "../components/Shopitem.astro"
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Amp.webp" title="Pedal" price={5.55} items="5" />
-        <Shopitem img="Eguitar.avif" title="Guitarra Electrica" price={252} items="3" />
+        <Shopitem img="Amp.webp" title="Pedal" price={252} items="3" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
@@ -32,23 +32,27 @@ import Shopitem from "../components/Shopitem.astro"
 
 
 <style>
-    img {
-        size: 25px;
-    }
 
     .Nav {
+        padding-top: 10px;
         display: flex;
         gap: 16px;
         justify-content: space-between;
         padding: 10px;
-        background-color: #020E26;
+        background-color: white;
     }
 
     .Shop {
+        padding-top: 10px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 16px;
         background-color: #020E26;
+    }
+
+    .Cart-container {
+        display: flex;
+        justify-content: space-between;
     }
 
 </style>
