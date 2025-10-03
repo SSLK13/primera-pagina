@@ -34,8 +34,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </div>
 
-    <div>
-        <img src="" alt="">
+    <div class="Bg_container">
         <h1>Forma parte de Nuestra Familia</h1>
         <h2>+50.000 Miembros</h2>
     </div>
@@ -54,7 +53,7 @@ import Layout from "../layouts/Layout.astro";
 <style>
     .Container {
         width: 100%;
-        height: 675px;
+        height: 800px;
         background-image: url("Eguitarbg.jpg");
         background-size: cover;
     }
@@ -66,8 +65,19 @@ import Layout from "../layouts/Layout.astro";
     .Image_container {
         display: flex;
         justify-content: space-between;
-        padding: 10px 10%;
-        background-color: rgb(9, 9, 85);
+        gap: 25px;
+        padding: 10px;
+        background-color: #020E26;
+    }
+
+    .Image_container p {
+        color: white;
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .Image_container div {
+        padding: 10px;
     }
 
     .Store {
@@ -77,6 +87,13 @@ import Layout from "../layouts/Layout.astro";
 
     .Store img {
         height: 300px;
+    }
+
+    .Bg_container {
+        background-image: url("Hands.jpg");
+        width: 100%;
+        background-size: cover;
+        height: 800px;
     }
 
 </style>
