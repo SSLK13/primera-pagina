@@ -1,22 +1,31 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import { Icon } from 'astro-icon/components'
+import Shopitem from "../components/Shopitem.astro"
 ---
 
 <Layout>
 
-    <div>
-        <div class="Nav">
-            <h1>Aqui va una barra de busqueda</h1>
-            <h2>Aqui va un filtro</h2>
-            <div>
-                <p>Ir al carro</p>
-                <button>
-                    <Icon name="cart" />
-                </button>
-            </div>
+    
+    <div class="Nav">
+        <h1>Aqui va una barra de busqueda</h1>
+        <h2>Aqui va un filtro</h2>
+        <div>
+            <p>Ir al carro</p>
+            <button>
+                <Icon name="cart" />
+            </button>
         </div>
-        
+    </div>
+    <div class="Shop">
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
     </div>
     
 </Layout>
@@ -29,6 +38,17 @@ import { Icon } from 'astro-icon/components'
 
     .Nav {
         display: flex;
+        gap: 16px;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #020E26;
+    }
+
+    .Shop {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+        background-color: #020E26;
     }
 
 </style>
