@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon/components"
+---
+
 <header>
     <nav>
         <div>
@@ -17,8 +21,12 @@
         </div>
 
         <div>
-            <button></button>
-            <button></button>
+            <button>
+                <Icon name={"user"} size={"26px"}/>
+            </button>
+            <button>
+                <Icon name={"map-pin"} size={"26px"}/>
+            </button>
         </div>
         
     </nav>
@@ -31,7 +39,8 @@
         gap: 16px;
     }
 
-    nav {display: flex;
+    nav {
+    display: flex;
     gap: 16px;
     justify-content: space-between;
     align-items:center;
