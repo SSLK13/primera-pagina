@@ -1,8 +1,34 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import { Icon } from 'astro-icon/components'
 ---
 
 <Layout>
+
+    <div>
+        <div class="Nav">
+            <h1>Aqui va una barra de busqueda</h1>
+            <h2>Aqui va un filtro</h2>
+            <div>
+                <p>Ir al carro</p>
+                <button>
+                    <Icon name="cart" />
+                </button>
+            </div>
+        </div>
+        
+    </div>
     
 </Layout>
-pagina provisional
+
+
+<style>
+    img {
+        size: 25px;
+    }
+
+    .Nav {
+        display: flex;
+    }
+
+</style>

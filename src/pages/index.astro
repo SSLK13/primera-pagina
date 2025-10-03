@@ -10,18 +10,27 @@ import Layout from "../layouts/Layout.astro";
     <div>
         <h2>Instrumentos de Calidad para Cada Músico</h2>
         <div class="Image_container">
-            <Textimg title="Texto random 1" img="Keyboard.jpg" />
-            <Textimg title="Texto random 2" img="Drums.jpg" />
-            <Textimg title="Texto random 3" img="Eguitar.avif" />
+            <div>
+                <p>Teclados</p>
+                <img src="Keyboard.jpg" />
+            </div>
+            <div>
+                <img src="Drums.jpg" />
+                <p>Baterias</p>
+            </div>
+            <div>
+                <p>Guitarras</p>
+                <img src="Eguitar2.jpg" />
+            </div>
         </div>
     </div>
 
-    <div>
+    <div class="Store">
         <h2>Explora Nuestra Colección</h2>
-        <div>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+        <div class="Store">
+            <img src="Eguitar.avif" alt="">
+            <img src="Drums2.webp" alt="">
+            <img src="Amp.webp" alt="">
         </div>
     </div>
 
@@ -58,10 +67,16 @@ import Layout from "../layouts/Layout.astro";
         display: flex;
         justify-content: space-between;
         padding: 10px 10%;
+        background-color: rgb(9, 9, 85);
     }
 
-    .Background {
-        width: 100% ;;
+    .Store {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .Store img {
+        height: 300px;
     }
 
 </style>

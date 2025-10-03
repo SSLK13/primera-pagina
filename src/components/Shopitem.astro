@@ -1,0 +1,31 @@
+---
+interface Props {
+    title: string
+    img: string
+    items: string
+    price: number
+
+}
+
+const title = Astro.props.title
+const image = Astro.props.img
+const items = Astro.props.items
+const price = Astro.props.price
+---
+
+<div>
+    <img src={image} alt="">
+    <p>{title}</p>
+    <div>
+        <p>{price}</p>
+        <p>{items}</p>
+    </div>
+    
+</div>
+
+<style>
+    img {
+        height: 200px;
+        object-fit: cover;
+    }
+</style>
