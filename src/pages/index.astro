@@ -27,11 +27,23 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div class="Store">
-        <h2>Explora Nuestra Colección</h2>
+        <div class="Texts_cont">
+            <h2>Explora Nuestra Colección</h2>
+            <h3>Echa un vistazo a la tienda</h3>
+        </div>
         <div class="Store">
-            <img src="Eguitar.avif" alt="">
-            <img src="Drums2.webp" alt="">
-            <img src="Amp.webp" alt="">
+            <div class="car">
+                <img src="Drums2.webp" alt="">
+                <img src="Amp.webp" alt="">
+                <img src="bass.webp" alt="">
+                <img src="Ramp.jpg" alt="">
+                <img src="keyb.webp" alt="">
+                <img src="Drums2.webp" alt="">
+                <img src="Amp.webp" alt="">
+                <img src="bass.webp" alt="">
+                <img src="Ramp.jpg" alt="">
+                <img src="keyb.webp" alt="">    
+            </div>
         </div>
     </div>
 
@@ -75,14 +87,12 @@ import Layout from "../layouts/Layout.astro";
         z-index: -99;
         width: 100%;
         object-fit: cover;
-
     }
         
     .Image_container {
         display: flex;
         justify-content: space-between;
         gap: 55px;
-        padding: 10px;
         background-color: #020E26;
         padding: 0px 5%;
     }
@@ -94,7 +104,7 @@ import Layout from "../layouts/Layout.astro";
     .Subtitle {
         font-size: 36px;
         color: white;
-        font-weight: 600;
+        font-weight: 700;
         padding-left: 10px;
     }
 
@@ -111,10 +121,44 @@ import Layout from "../layouts/Layout.astro";
     .Store {
         display: flex;
         justify-content: space-between;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .car {
+        display: flex;
+        width: calc(200%);
+        animation: scroll 60s linear infinite;
+    }
+
+    .car img {
+        width: 300px;
+        height: auto;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
     }
 
     .Store img {
         height: 300px;
+        padding: 10px;
+    }
+
+    .Texts_cont h2 {
+        font-size: 36px;
+        font-weight: 600;
+        padding: 20px 20px;
+    }
+
+    .Texts_cont h3 {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 20px 20px;
     }
 
     .Bg_container {
@@ -122,6 +166,22 @@ import Layout from "../layouts/Layout.astro";
         width: 100%;
         background-size: cover;
         height: 800px;
+    }
+
+    .Bg_container h1 {
+        color: white;
+        font-size: 56px;
+        font-weight: 700;
+        padding-top: 100px;
+        padding-left: 30px;
+    }
+
+    .Bg_container h2 {
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+        padding-left: 30px;
+
     }
 
 </style>
