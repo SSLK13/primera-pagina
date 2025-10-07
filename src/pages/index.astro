@@ -4,11 +4,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 <Layout>
     <div class="Container">
-        <h1>Convierte el silencio en sonido</h1>
+        <h1 class="Main-title">Convierte el silencio en sonido</h1>
+        <img src="Eguitarbg.jpg" alt="">
     </div>
 
-    <div>
-        <h2>Instrumentos de Calidad para Cada Músico</h2>
+    <div class="Second-container">
+        <h2 class="Subtitle">Instrumentos de Calidad para Cada Músico</h2>
         <div class="Image_container">
             <div>
                 <p>Teclados</p>
@@ -52,22 +53,49 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
     .Container {
-        width: 100%;
+        position: relative;
+        overflow: hidden;
         height: 800px;
-        background-image: url("Eguitarbg.jpg");
-        background-size: cover;
+        background-color: black;
+        z-index: -100;
+
     }
     .Container h1 {
         color: aliceblue;
-        
+        font-size: 54px;
+        font-weight: 700;
+        position: absolute;
+        bottom: 0;
+        padding-left: 20px;
+        padding-bottom: 2.5%;
     }
 
+    .Container img {
+        position: absolute;
+        z-index: -99;
+        width: 100%;
+        object-fit: cover;
+
+    }
+        
     .Image_container {
         display: flex;
         justify-content: space-between;
-        gap: 25px;
+        gap: 55px;
         padding: 10px;
         background-color: #020E26;
+        padding: 0px 5%;
+    }
+
+    .Second-container {
+        background-color: #020E26;
+    }
+
+    .Subtitle {
+        font-size: 36px;
+        color: white;
+        font-weight: 600;
+        padding-left: 10px;
     }
 
     .Image_container p {
