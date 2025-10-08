@@ -8,24 +8,48 @@ import Shopitem from "../components/Shopitem.astro"
 
     
     <div class="Nav">
-        <h1>Aqui va una barra de busqueda</h1>
-        <h2>Aqui va un filtro</h2>
+
         <div class="Cart-container">
-            <p>Ir al carro</p>
-            <button>
-                <Icon name="cart" size={"22px"}/>
-            </button>
+            <div class="Checkboxes">
+                <div style="display: flex;">
+                    <p>Guitarras</p>
+                    <input type="checkbox", id="guitar">
+                </div>
+                <div style="display: flex;">
+                    <p>Bajos</p>
+                    <input type="checkbox", id="bass">
+                </div>
+                <div style="display: flex;">
+                    <p>Amplificadores</p>
+                    <input type="checkbox", id="amp">
+                </div>
+                <div style="display: flex;">
+                    <p>Baterias</p>
+                    <input type="checkbox", id="drums">
+                </div>
+                <div style="display: flex;">
+                    <p>Pedales</p>
+                    <input type="checkbox", id="pedal">
+                </div>
+                
+            </div>
+            <div style="display: flex;">
+                <p>Ir al carro</p>
+                <button>
+                    <Icon name="cart" size={"36px"}/>
+                </button>
+            </div>
         </div>
     </div>
+
     <div class="Shop">
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Amp.webp" title="Pedal" price={5.55} items="5" />
         <Shopitem img="Amp.webp" title="Pedal" price={252} items="3" />
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="amp2.jpg" title="Amplificador Marshall" price={2.5} items="10" />
+        <Shopitem img="amp3.jpg" title="Amplificador Boss" price={2.5} items="10" />
     </div>
     
 </Layout>
@@ -53,6 +77,11 @@ import Shopitem from "../components/Shopitem.astro"
     .Cart-container {
         display: flex;
         justify-content: space-between;
+        width: 100%;
+    }
+
+    .Checkboxes {
+        display: flex;
     }
 
 </style>
