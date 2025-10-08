@@ -1,7 +1,7 @@
 ---
 // Codigo JS TS
 import '../styles/global.css'
-import Navbar from '../components/Navbar.astro'
+import Navbar from '../components/Navbar.astro';
 import Footer from "../components/Footer.astro";
 ---
 
@@ -22,5 +22,19 @@ import Footer from "../components/Footer.astro";
 		<slot />
 		<Footer />
 	</body>
+	
 
 </html>
+
+<script>
+	import Lenis from 'lenis';
+
+	const lenis = new Lenis({
+  	autoRaf: true,
+	});
+
+	lenis.on('scroll', (e) => {
+  	console.log(e);
+	});
+	
+</script>

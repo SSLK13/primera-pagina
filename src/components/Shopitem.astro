@@ -20,7 +20,7 @@ const price = Astro.props.price
     </div>
     <div class="Texts">
         <p>${price}</p>
-        <p>{items}</p>
+        <h2>Stock {items}</h2>
     </div>
     
 </div>
@@ -40,6 +40,11 @@ const price = Astro.props.price
         padding: 10px;
         display: flex;
         justify-content: space-between;
+    }
+
+    .Texts p {
+        font-weight: 500;
+        font-size: 24px;
     }
 
     img {

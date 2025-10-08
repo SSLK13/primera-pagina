@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components"
 ---
 
 <header>
-    <nav>
+    <nav id="main">
         <div>
             <a href="/">
                 <h1>CM</h1>
@@ -19,7 +19,7 @@ import { Icon } from "astro-icon/components"
 
         <div class="Buttons">
             <a href="/#location">
-                <Icon name={"map-pin"} size={"36px"}/>
+                <Icon name={"map-pin"} size={"36px"} class={"Icon"}/>
             </a>
         </div>
         
@@ -56,6 +56,11 @@ import { Icon } from "astro-icon/components"
 
     li a {
         font-size: 22px;
+    }
+
+    .Icon:hover {
+        opacity: .5;
+        transition: all .3s ease;
     }
 
 </style>

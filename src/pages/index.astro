@@ -3,11 +3,17 @@ import Textimg from "../components/Textimg.astro";
 import Layout from "../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 ---
+
 <Layout>
     <div class="Container">
         <h1 class="Main-title">Convierte el silencio en sonido</h1>
         <img src="Eguitarbg.jpg" alt="">
     </div>
+
+    <a href="/#main" class="Float">
+        <Icon name={"up"} size={"64px"} color={"grey"} class={"Icon"}>
+    </a>
+    
 
     <div class="Second-container">
         <h2 class="Subtitle">Instrumentos de Calidad para Cada Músico</h2>
@@ -33,7 +39,7 @@ import { Icon } from "astro-icon/components";
             <h3 style="text-align: center;">Echa un vistazo a la tienda</h3>
             <div style="display: flex; justify-content: center;">
                 <a href="/shop" style="width: 72px;">
-                    <Icon name={"shop"} size={"72px"}>
+                    <Icon name={"shop"} size={"72px"} class={"Icon"}>
                 </a>
             </div>
         </div>
@@ -83,7 +89,7 @@ import { Icon } from "astro-icon/components";
         </div>
         <div class="Divider"></div>
         <div class="Location">
-            <img src="building.jpg" alt="">
+            <img src="Building.jpg" alt="">
             <img src="locate.png" alt="">
         </div>
     </div>
@@ -91,6 +97,11 @@ import { Icon } from "astro-icon/components";
 </Layout>
 
 <style>
+    
+    html {
+        scroll-behavior: smooth;
+    }
+
     .Container {
         position: relative;
         overflow: hidden;
@@ -114,6 +125,13 @@ import { Icon } from "astro-icon/components";
         z-index: -99;
         width: 100%;
         object-fit: cover;
+    }
+
+    .Float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 100;
     }
         
     .Image_container {
@@ -266,6 +284,11 @@ import { Icon } from "astro-icon/components";
         width: 100px;
         height: 300px;
         background: linear-gradient(100deg, white 50%, #020E26 50%);
+    }
+    
+    .Icon:hover {
+        opacity: .5;
+        transition: all .3s ease;
     }
 
 </style>

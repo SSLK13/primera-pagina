@@ -11,23 +11,23 @@ import Shopitem from "../components/Shopitem.astro"
 
         <div class="Cart-container">
             <div class="Checkboxes">
-                <div style="display: flex;">
+                <div class="Inputs">
                     <p>Guitarras</p>
                     <input type="checkbox", id="guitar">
                 </div>
-                <div style="display: flex;">
+                <div class="Inputs">
                     <p>Bajos</p>
                     <input type="checkbox", id="bass">
                 </div>
-                <div style="display: flex;">
+                <div class="Inputs">
                     <p>Amplificadores</p>
                     <input type="checkbox", id="amp">
                 </div>
-                <div style="display: flex;">
+                <div class="Inputs">
                     <p>Baterias</p>
                     <input type="checkbox", id="drums">
                 </div>
-                <div style="display: flex;">
+                <div class="Inputs">
                     <p>Pedales</p>
                     <input type="checkbox", id="pedal">
                 </div>
@@ -43,7 +43,7 @@ import Shopitem from "../components/Shopitem.astro"
     </div>
 
     <div class="Shop">
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="22" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
         <Shopitem img="Amp.webp" title="Pedal" price={5.55} items="5" />
@@ -56,6 +56,10 @@ import Shopitem from "../components/Shopitem.astro"
 
 
 <style>
+
+    html {
+        scroll-behavior: smooth;
+    }
 
     .Nav {
         padding-top: 10px;
@@ -82,6 +86,14 @@ import Shopitem from "../components/Shopitem.astro"
 
     .Checkboxes {
         display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    .Inputs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
 </style>
