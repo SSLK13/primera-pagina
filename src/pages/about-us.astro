@@ -3,6 +3,118 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout>
-    
+    <div class="First-sec">
+        <h1>Sobre Nosotros</h1>
+        <p>
+            En CM Music Store, la música es más que un negocio: es nuestra pasión. 
+            Desde nuestros inicios, nos propusimos ser el punto de encuentro para músicos que buscan calidad, 
+            inspiración y comunidad. Ya seas parte de una banda que recién comienza o un artista con años de trayectoria, 
+            aquí encontrarás los instrumentos, accesorios y el impulso que tu sonido necesita.
+        </p>
+    </div>
+    <div class="Second-sec">
+        <p>
+            Más que una tienda, somos un espacio para crear. 
+            Organizamos sesiones acústicas, demos en vivo, y colaboraciones con artistas locales. 
+            Queremos que CM Music Store sea el lugar donde las ideas musicales se convierten en proyectos reales. 
+            Aquí se forman conexiones, se comparten experiencias, y se construye comunidad.
+        </p>
+        <div class="Line">
+            <div></div>
+        </div>
+    </div>
+    <h1 style="color: black;">Politica y Privacidad</h1>
+    <div class="Privacy">
+        <p>🔐 Política de Privacidad – CM Music Store
+            En CM Music Store, valoramos tu privacidad y nos comprometemos a proteger la información personal que compartes con nosotros. 
+            Esta política explica cómo recopilamos, usamos y resguardamos tus datos cuando visitas nuestra tienda física o navegas por nuestro sitio web.
+        </p>
+        <p>
+            📋 Información que recopilamos
+            Recopilamos datos personales como:
+
+            Nombre, correo electrónico y número de teléfono al realizar compras o suscribirte a nuestro boletín.
+
+            Información de pago para procesar transacciones de forma segura.
+
+            Preferencias musicales o de productos, cuando interactúas con nuestras encuestas o formularios.
+        </p>
+        <p>
+            🛡️ Uso de la información
+            Utilizamos tus datos para:
+
+            Procesar pedidos y brindar atención al cliente.
+
+            Enviarte novedades, promociones y eventos relacionados con CM Music Store (solo si lo autorizas).
+
+            Mejorar tu experiencia de compra y personalizar nuestras recomendaciones.
+        </p>
+    </div>
 </Layout>
-Sobre Nosotros
+
+
+
+<style>
+    h1  {
+        color: white;
+        text-align: center;
+        font-size: 64px;
+        font-weight: 700;
+    }
+
+    .First-sec {
+        background-color: #020E26;
+        background-image: url("about-bg.jpg");
+        background-size: cover;
+        padding-top: 50px;
+        min-height: 800px;
+    }
+
+    .First-sec p {
+        color: white;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 600;
+        padding: 60px;
+    }
+
+    .Second-sec {
+        display: flex;
+        position: relative;
+        background-color: #020E26;
+    }
+
+    .Second-sec p {
+        color: white;
+        text-align: left;
+        font-size: 36px;
+        font-weight: 600;
+        padding: 60px;
+        width: 80%;
+    }
+
+    .Line {
+        width: 100%;
+        background-image: url("event.jpg");
+        background-size: cover;
+    }
+
+    .Line div {
+        width: 40%;
+        height: 100%;
+        background: linear-gradient(65deg, #020E26 50%, rgba(255,255,255,0) 50%);
+        
+    }
+    .Privacy {
+        padding-top: 30px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .Privacy p {
+        text-align: center;
+        font-size: 24px;
+        padding: 0px 33px;
+    }
+    
+</style>

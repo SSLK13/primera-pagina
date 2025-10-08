@@ -1,6 +1,7 @@
 ---
 import Textimg from "../components/Textimg.astro";
 import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
 ---
 <Layout>
     <div class="Container">
@@ -28,8 +29,13 @@ import Layout from "../layouts/Layout.astro";
 
     <div class="Store">
         <div class="Texts_cont">
-            <h2>Explora Nuestra Colección</h2>
-            <h3>Echa un vistazo a la tienda</h3>
+            <h2 style="text-align: center;">Explora Nuestra Colección</h2>
+            <h3 style="text-align: center;">Echa un vistazo a la tienda</h3>
+            <div style="display: flex; justify-content: center;">
+                <a href="/shop" style="width: 72px;">
+                    <Icon name={"shop"} size={"72px"}>
+                </a>
+            </div>
         </div>
         <div class="Store">
             <div class="car">
@@ -48,16 +54,37 @@ import Layout from "../layouts/Layout.astro";
     </div>
 
     <div class="Bg_container">
-        <h1>Forma parte de Nuestra Familia</h1>
+        <h1>Forma Parte de Nuestra Familia</h1>
         <h2>+50.000 Miembros</h2>
     </div>
 
-    <div>
-        <h3>Visitanos</h3>
-        <div>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+    <div class="Direction" id="location">
+        <div class="Info">
+            <h1>Visitanos</h1>
+            <div class="Text-info">
+                <div class="Section">
+                    <h3>Contactanos</h3>
+                    <p>Tel: (0212) 555-6789</p>
+                    <p>Email: contacto@armoníarecords.com</p>
+                </div>
+                <div class="Section">
+                    <h3>Horario</h3>
+                    <p>Lunes - Viernes</p>
+                    <p>7am - 5pm</p>
+                    <p>Sábado</p>
+                    <p>10am - 3pm</p>
+                </div>
+                <div class="Section">
+                    <h3>Encuéntranos</h3>
+                    <p>Calle del Pentagrama Nº 88 Sector Melodía</p>
+                    <p>Ciudad Sonora</p>
+                </div>
+            </div>
+        </div>
+        <div class="Divider"></div>
+        <div class="Location">
+            <img src="building.jpg" alt="">
+            <img src="locate.png" alt="">
         </div>
     </div>
 
@@ -149,16 +176,22 @@ import Layout from "../layouts/Layout.astro";
         padding: 10px;
     }
 
+    .Texts_cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .Texts_cont h2 {
         font-size: 36px;
         font-weight: 600;
-        padding: 20px 20px;
+        padding: 0px 20px;
     }
 
     .Texts_cont h3 {
         font-size: 16px;
         font-weight: 600;
-        padding: 20px 20px;
+        padding: 10px 20px;
     }
 
     .Bg_container {
@@ -182,6 +215,57 @@ import Layout from "../layouts/Layout.astro";
         font-weight: 700;
         padding-left: 30px;
 
+    }
+
+    .Direction {
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(90deg, white 50%, #020E26 50%);
+    }
+
+    .Direction img {
+        height: 300px;
+        padding: 28px 10px;
+    }
+
+    .Location {
+        display: flex;
+        background-color: #020E26;
+    }
+
+    .Info h1 {
+        color: black;
+        font-size: 36px;
+        font-weight: 600;
+        padding-left: 56px;
+        padding-top: 50px;
+    }
+
+    .Info {
+        background-color: white;
+    }
+
+    .Text-info {
+        display: flex;
+        gap: 20px;
+    }
+
+    .Text-info p {
+        text-align: center;
+        color: black;
+    }
+
+    .Section h3 {
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .Divider {
+        width: 100px;
+        height: 300px;
+        background: linear-gradient(100deg, white 50%, #020E26 50%);
     }
 
 </style>

@@ -5,13 +5,10 @@ import { Icon } from "astro-icon/components"
 <header>
     <nav>
         <div>
-            <h1>CM</h1>
-        </div>
-        
-        <div>
-            <h2>Aqui va una barra de busqueda</h2>
-        </div>
-        
+            <a href="/">
+                <h1>CM</h1>
+            </a>
+        </div>    
         <div>
             <ul>
                 <li><a href="/">Inicio</a></li>
@@ -20,13 +17,10 @@ import { Icon } from "astro-icon/components"
             </ul>
         </div>
 
-        <div>
-            <button>
-                <Icon name={"user"} size={"26px"}/>
-            </button>
-            <button>
-                <Icon name={"map-pin"} size={"26px"}/>
-            </button>
+        <div class="Buttons">
+            <a href="/#location">
+                <Icon name={"map-pin"} size={"36px"}/>
+            </a>
         </div>
         
     </nav>
@@ -34,6 +28,7 @@ import { Icon } from "astro-icon/components"
 </header>
 
 <style>
+
     ul {
         display: flex;
         gap: 16px;
@@ -49,9 +44,18 @@ import { Icon } from "astro-icon/components"
     }
 
     h1 {
+        padding-left: 20px;
         font-size: 52px;
         font-weight: 600;
         font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .Buttons {
+        padding-right: 20px;
+    }
+
+    li a {
+        font-size: 22px;
     }
 
 </style>

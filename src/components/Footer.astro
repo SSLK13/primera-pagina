@@ -1,7 +1,106 @@
-<div>
-    <img src="" alt="">
-    <p>HoOoola</p>
-    <p></p>
-    <p></p>
-    <p></p>
+---
+import { Icon } from "astro-icon/components"
+---
+
+<div class="Main">
+    <div class="Light_divider"></div>
+    <h1>CM</h1>
+    <div class="Main-container">
+        <div class="Links">
+            <h2>Donde nacen los nuevos sonidos</h2>
+            <h2>Mantente conectado</h2>
+            <a href="https://www.facebook.com/" target="_blank">
+                <Icon name={"facebook"} size={"36px"} color={"grey"}/>
+                Facebook
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+                <Icon name={"instagram"} size={"36px"} color={"grey"}/>
+                Instagram
+            </a>
+            <a href="https://www.Youtube.com/" target="_blank">
+                <Icon name={"youtube"} size={"36px"} color={"grey"}/>
+                Youtube
+            <a href="https://www.spotify.com/" target="_blank">
+                <Icon name={"spotify"} size={"36px"} color={"grey"}/>
+                Spotify
+        </div>
+        <div>
+            <h2 style="color: white;">a</h2>
+            <h2>Tienda</h2>
+            <div class="Second-sec">
+                <a href="/shop">Guitarras</a>
+                <a href="/shop">Baterias</a>
+                <a href="/shop">Bajos</a>
+                <a href="/shop">Teclados</a>
+            </div>
+        </div>
+        <div class="About">
+            <h2 style="color: white;">a</h2>
+            <h2>Sobre Nostros</h2>
+            <div class="Second-sec">
+                <a href=""></a>
+                <a href="/about-us">Contacto</a>
+                <a href="/about-us">Terminos</a>
+                <a href="/about-us">Politica</a>
+                <a href="/about-us">Privacidad</a>
+            </div>
+        </div>
+    </div>
+    <p class="Copy" style="text-align: center; color:grey; font-size: 12px;">Copyright© CMmusstore. Todos los derechos reservados</p>
 </div>
+
+<style>
+    .Main {
+        background-color: white;
+        padding-top: 10px;
+    }
+
+    .Main-container {
+        display: flex;
+    }
+
+    .Links {
+        padding-bottom: 22px;
+    }
+
+    .Links a {
+        display: flex;
+        padding-left: 20px;
+        padding-top: 5px;
+        font-weight: 500;
+    }
+
+    .Light_divider {
+        height: 10px;
+        background-color: #020E26;
+        width: 100%;
+    }
+
+    h1 {
+        padding-left: 20px;
+        font-size: 64px;
+        font-weight: 600;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    h2  {
+        font-size: 18px;
+        font-weight: 700;
+        padding: 20px;
+    }
+
+    .Second-sec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .Second-sec a {
+        padding-top: 7px;
+        padding-left: 20px;
+        font-weight: 500;
+    }
+
+    .About {
+        padding-left: 100px;
+    }
+</style>
