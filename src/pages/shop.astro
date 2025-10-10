@@ -25,7 +25,7 @@ import Shopitem from "../components/Shopitem.astro"
                 </div>
                 <div class="Inputs">
                     <p>Baterias</p>
-                    <input type="checkbox", id="drums">
+                    <input type="checkbox", id="drums-switch">
                 </div>
                 <div class="Inputs">
                     <p>Pedales</p>
@@ -33,7 +33,7 @@ import Shopitem from "../components/Shopitem.astro"
                 </div>
                 
             </div>
-            <div style="display: flex;">
+            <div class="Cart-icon">
                 <p>Ir al carro</p>
                 <button>
                     <Icon name="cart" size={"36px"}/>
@@ -43,13 +43,34 @@ import Shopitem from "../components/Shopitem.astro"
     </div>
 
     <div class="Shop">
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="22" />
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="10" />
-        <Shopitem img="Amp.webp" title="Pedal" price={5.55} items="5" />
-        <Shopitem img="Amp.webp" title="Pedal" price={252} items="3" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="22" id="drums" />
+        <Shopitem img="drums2.jpg" title="Bateria" price={2.5} items="10" id="drums"/>
+        <Shopitem img="drums3.webp" title="Bateria" price={2.5} items="10" id="drums"/>
+        <Shopitem img="drums4.jpg" title="Bateria" price={2.5} items="10" id="drums"/>
+        <Shopitem img="drums5.webp" title="Bateria" price={2.5} items="10" id="drums"/>
+        <Shopitem img="pedal.webp" title="Pedal Boss RV-6" price={5.55} items="5" />
+        <Shopitem img="pedal2.webp" title="Pedal Boss DS-1" price={5.55} items="5" />
+        <Shopitem img="pedal2.webp" title="Pedal Boss DS-1" price={5.55} items="5" />
+        <Shopitem img="pedal3.webp" title="Pedal MXR" price={5.55} items="5" />
+        <Shopitem img="pedal4.webp" title="Pedal Warm" price={5.55} items="5" />
+        <Shopitem img="pedal5.jpg" title="Pedal Marshall JCM800" price={5.55} items="5" />
+        <Shopitem img="amp.jpg" title="Amplificador Line" price={252} items="3" />
         <Shopitem img="amp2.jpg" title="Amplificador Marshall" price={2.5} items="10" />
         <Shopitem img="amp3.jpg" title="Amplificador Boss" price={2.5} items="10" />
+        <Shopitem img="amp4.jpg" title="Amplificador Gamma" price={2.5} items="10" />
+        <Shopitem img="amp5.webp" title="Amplificador Positive Grid" price={2.5} items="10" />
+        <Shopitem img="guitar.webp" title="Guitarra Jackson" price={2.5} items="10" />
+        <Shopitem img="guitar2.jpg" title="Guitarra Les Paul" price={2.5} items="10" />
+        <Shopitem img="guitar3.webp" title="Guitarra Fender" price={2.5} items="10" />
+        <Shopitem img="guitar4.webp" title="Guitarra Jackson Pro" price={2.5} items="10" />
+        <Shopitem img="guitar5.jpg" title="Guitarra Les Paul Traditional" price={2.5} items="10" />
+        <Shopitem img="bass.webp" title="Bajo Mitchell" price={2.5} items="10" />
+        <Shopitem img="bass2.webp" title="Bajo Ibanez" price={2.5} items="10" />
+        <Shopitem img="bass3.webp" title="Bajo Yamaha" price={2.5} items="10" />
+        <Shopitem img="bass4.webp" title="Bajo Fender Acustico" price={2.5} items="10" />
+        <Shopitem img="bass5.jpg" title="Bajo Ibanez Acustico" price={2.5} items="10" />
+        
+        
     </div>
     
 </Layout>
@@ -71,7 +92,7 @@ import Shopitem from "../components/Shopitem.astro"
     }
 
     .Shop {
-        padding-top: 10px;
+        padding: 10px;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 16px;
@@ -90,10 +111,35 @@ import Shopitem from "../components/Shopitem.astro"
         width: 50%;
     }
 
+    .Checkboxes input {
+        width: 15px;
+        height: 15px;
+        accent-color: black;
+    }
+
     .Inputs {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
+    .Inputs p {
+        font-weight: 600;
+        padding-right: 10px;
+    }
+
+    .Cart-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .Cart-icon p {
+        font-weight: 600;
+    }
+
+    #drums-switch:checked + #drums {
+    display: none;
+  }
+
 </style>
+

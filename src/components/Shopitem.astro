@@ -4,6 +4,7 @@ interface Props {
     img: string
     items: string
     price: number
+    id: string
 
 }
 
@@ -11,11 +12,14 @@ const title = Astro.props.title
 const image = Astro.props.img
 const items = Astro.props.items
 const price = Astro.props.price
+const id = Astro.props.id
 ---
 
-<div class="Main">
+<div class="Main" id={id}>
     <div class="Container">
-        <img src={image} alt="">
+        <div class="Img-container">
+            <img src={image} alt="">
+        </div>
         <p class="Title">{title}</p>
     </div>
     <div class="Texts">
@@ -51,10 +55,11 @@ const price = Astro.props.price
         width: 100%;
         background-color: white;
         object-fit: cover;
-        padding: auto;
+        padding: 10px;
     }
 
-    .Container {
+    .Img-container {
+        background-color: white;
     }
 
 </style>
