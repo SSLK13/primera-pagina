@@ -69,9 +69,15 @@ import Shopitem from "../components/Shopitem.astro"
         <Shopitem img="bass3.webp" title="Bajo Yamaha" price={169.99} items="2" />
         <Shopitem img="bass4.webp" title="Bajo Fender Acustico" price={199.99} items="6" />
         <Shopitem img="bass5.jpg" title="Bajo Ibanez Acustico" price={242} items="7" />
+    </div>
 
-        
-        
+    <h1 style="font-size: 36px; font-weight: 600; text-align: center;">Delivery gratis a todas las areas de la ciudad</h1>
+    <div class="Delivery">
+        <img src="locate.png" alt="">
+        <div style="width: 50%;">
+            <img src="van.avif" alt="" style="width: 100%;">
+            <h1 style="font-size: 26px; font-weight: 600; text-align: center;">Recibelo hoy mismo</h1>
+        </div>
     </div>
     
 </Layout>
@@ -140,7 +146,19 @@ import Shopitem from "../components/Shopitem.astro"
 
     #drums-switch:checked + #drums {
     display: none;
-  }
+    }
+
+    .Delivery {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+    }
+
+    .Delivery img {
+        width: 50%;
+        padding: 20px;
+        object-fit: cover;
+    }
 
 </style>
 
