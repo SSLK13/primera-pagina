@@ -6,6 +6,14 @@ import Shopitem from "../components/Shopitem.astro"
 
 <Layout>
 
+    <script>
+        function mostrarElemento() {
+            const checkbox = document.getElementById("drums-switch");
+            const contenido = document.getElementById('drums');
+            contenido.style.display = checkbox.checked ? 'block' : 'none';
+        }
+    </script>
+
     
     <div class="Nav">
 
@@ -25,7 +33,7 @@ import Shopitem from "../components/Shopitem.astro"
                 </div>
                 <div class="Inputs">
                     <p>Baterias</p>
-                    <input type="checkbox", id="drums-switch">
+                    <input type="checkbox", id="drums-switch" onchange="mostrarElemento()">
                 </div>
                 <div class="Inputs">
                     <p>Pedales</p>
@@ -43,32 +51,33 @@ import Shopitem from "../components/Shopitem.astro"
     </div>
 
     <div class="Shop">
-        <Shopitem img="Drums2.webp" title="Bateria" price={2.5} items="22" id="drums" />
-        <Shopitem img="drums2.jpg" title="Bateria" price={2.5} items="10" id="drums"/>
-        <Shopitem img="drums3.webp" title="Bateria" price={2.5} items="10" id="drums"/>
-        <Shopitem img="drums4.jpg" title="Bateria" price={2.5} items="10" id="drums"/>
-        <Shopitem img="drums5.webp" title="Bateria" price={2.5} items="10" id="drums"/>
-        <Shopitem img="pedal.webp" title="Pedal Boss RV-6" price={5.55} items="5" />
-        <Shopitem img="pedal2.webp" title="Pedal Boss DS-1" price={5.55} items="5" />
-        <Shopitem img="pedal2.webp" title="Pedal Boss DS-1" price={5.55} items="5" />
-        <Shopitem img="pedal3.webp" title="Pedal MXR" price={5.55} items="5" />
-        <Shopitem img="pedal4.webp" title="Pedal Warm" price={5.55} items="5" />
-        <Shopitem img="pedal5.jpg" title="Pedal Marshall JCM800" price={5.55} items="5" />
-        <Shopitem img="amp.jpg" title="Amplificador Line" price={252} items="3" />
-        <Shopitem img="amp2.jpg" title="Amplificador Marshall" price={2.5} items="10" />
-        <Shopitem img="amp3.jpg" title="Amplificador Boss" price={2.5} items="10" />
-        <Shopitem img="amp4.jpg" title="Amplificador Gamma" price={2.5} items="10" />
-        <Shopitem img="amp5.webp" title="Amplificador Positive Grid" price={2.5} items="10" />
-        <Shopitem img="guitar.webp" title="Guitarra Jackson" price={2.5} items="10" />
-        <Shopitem img="guitar2.jpg" title="Guitarra Les Paul" price={2.5} items="10" />
-        <Shopitem img="guitar3.webp" title="Guitarra Fender" price={2.5} items="10" />
-        <Shopitem img="guitar4.webp" title="Guitarra Jackson Pro" price={2.5} items="10" />
-        <Shopitem img="guitar5.jpg" title="Guitarra Les Paul Traditional" price={2.5} items="10" />
-        <Shopitem img="bass.webp" title="Bajo Mitchell" price={2.5} items="10" />
-        <Shopitem img="bass2.webp" title="Bajo Ibanez" price={2.5} items="10" />
-        <Shopitem img="bass3.webp" title="Bajo Yamaha" price={2.5} items="10" />
-        <Shopitem img="bass4.webp" title="Bajo Fender Acustico" price={2.5} items="10" />
-        <Shopitem img="bass5.jpg" title="Bajo Ibanez Acustico" price={2.5} items="10" />
+        <Shopitem img="Drums2.webp" title="Bateria" price={150} items="22" id="drums" />
+        <Shopitem img="drums2.jpg" title="Bateria" price={255} items="15"/>
+        <Shopitem img="drums3.webp" title="Bateria" price={167} items="3"/>
+        <Shopitem img="drums4.jpg" title="Bateria" price={283} items="17"/>
+        <Shopitem img="drums5.webp" title="Bateria" price={125} items="9"/>
+        <Shopitem img="pedal.webp" title="Pedal Boss RV-6" price={59.55} items="5" />
+        <Shopitem img="pedal2.webp" title="Pedal Boss DS-1" price={82} items="4" />
+        <Shopitem img="pedal2.webp" title="Pedal Boss DS-1" price={79.99} items="5" />
+        <Shopitem img="pedal3.webp" title="Pedal MXR" price={67} items="2" />
+        <Shopitem img="pedal4.webp" title="Pedal Warm" price={84.99} items="32" />
+        <Shopitem img="pedal5.jpg" title="Pedal Marshall JCM800" price={69.99} items="12" />
+        <Shopitem img="amp.jpg" title="Amplificador Line" price={252} items="18" />
+        <Shopitem img="amp2.jpg" title="Amplificador Marshall" price={299.99} items="14" />
+        <Shopitem img="amp3.jpg" title="Amplificador Boss" price={187} items="35" />
+        <Shopitem img="amp4.jpg" title="Amplificador Gamma" price={232} items="19" />
+        <Shopitem img="amp5.webp" title="Amplificador Positive Grid" price={184} items="3" />
+        <Shopitem img="guitar.webp" title="Guitarra Jackson" price={271} items="11" />
+        <Shopitem img="guitar2.jpg" title="Guitarra Les Paul" price={167} items="8" />
+        <Shopitem img="guitar3.webp" title="Guitarra Fender" price={211} items="15" />
+        <Shopitem img="guitar4.webp" title="Guitarra Jackson Pro" price={265} items="13" />
+        <Shopitem img="guitar5.jpg" title="Guitarra Les Paul Traditional" price={142} items="7" />
+        <Shopitem img="bass.webp" title="Bajo Mitchell" price={159} items="21" />
+        <Shopitem img="bass2.webp" title="Bajo Ibanez" price={243} items="16" />
+        <Shopitem img="bass3.webp" title="Bajo Yamaha" price={169.99} items="2" />
+        <Shopitem img="bass4.webp" title="Bajo Fender Acustico" price={199.99} items="6" />
+        <Shopitem img="bass5.jpg" title="Bajo Ibanez Acustico" price={242} items="7" />
+
         
         
     </div>
